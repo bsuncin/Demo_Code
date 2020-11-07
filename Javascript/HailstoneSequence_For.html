@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Hailstone Sequence For Loop</title>
+<body>
+
+<p>Input any number to calculate the Hailstone sequence.</p>
+<input id="input" type="number" value="4" min="1">
+<button onclick="run()">Run Sequence</button>
+<p id="result"></p>
+
+<script>
+
+    function run(){
+        const END = 1;
+        var start = document.getElementById("input").value;
+        var result = start.toString();
+        var next = start;
+
+        console.log(next);
+        
+        while(next != 1){
+            
+            console.log(result);
+            if(isEven(next)){
+                next = next / 2;
+            }
+            else{
+                next = (next * 3) + 1;
+            }
+            result = result + ", " + next.toString();
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+    
+    function isEven(x){
+        if( x % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
