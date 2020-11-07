@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    var currNum = 0;
+
+    function increase() {
+      currNum += 1;
+      return currNum;
+    };
+</script>
+<h2>Button Counter</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = increase()">
+Click me to add 1.</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 
